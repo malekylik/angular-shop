@@ -1,0 +1,20 @@
+<div class="slider-wrapper">
+  <div class="slider-control-wrapper" [class.slider-control-wrapper__right]="controlRight">
+    <div class="slider-control">
+      <span class="slider-control-info">
+        {{activePage + 1}}/{{pageLength}}
+      </span>
+      <div>
+          <button class="slider-control-arrow slider-control-arrow__left" (click)="prev()"></button>
+          <button class="slider-control-arrow slider-control-arrow__right" (click)="next()"></button>
+      </div>
+    </div>
+  </div>
+  <div #slider class="slider">
+    <ul [ngStyle]="sliderStyles">
+      <li *ngFor="let slide of slides" class="slide">
+        <ng-container [ngTemplateOutlet]="slide.templateRef"></ng-container>
+      </li>
+    </ul>
+  </div>
+</div>

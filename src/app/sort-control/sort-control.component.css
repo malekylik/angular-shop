@@ -1,0 +1,39 @@
+.main_sort-control-wrapper {
+    margin: 0 auto;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.main_sort-options > * {
+    color: #424242;
+    border: none;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-item:active {
+    background-color: hsl(210, 11%, 86%);
+}
+
+.main_sort-option-selected {
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.main-sort-option-drop-down {
+    background-color: hsl(210, 11%, 96%);
+}
+
+.main_sort-option-description {
+    font-size: 20px;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    margin-right: 30px;
+}

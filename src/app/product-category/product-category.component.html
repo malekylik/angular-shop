@@ -1,0 +1,10 @@
+<section class="wrapper__width main_product-category-wrapper">
+  <div class="catalog-name-with-line">
+      <app-name-with-line [name]="name" [rightSide]="right"></app-name-with-line>
+  </div>
+  <app-slider [controlRight]="!right">
+      <ng-container *ngFor="let product of products">
+        <app-product-small [product]="product" *appSlide></app-product-small>
+      </ng-container>
+  </app-slider>
+</section>

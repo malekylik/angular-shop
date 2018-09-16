@@ -1,0 +1,19 @@
+<a routerLink="/product/{{product.category}}/{{product.id}}">
+  <article class="product-small">
+    <img [src]="product.images.small" [alt]="product.name">
+
+    <div ngbDropdown class="d-inline-block product-sizes-drop-down">
+      <button id="dropdownBasic1" class="product-size-selected" [class.removeArrow]="product.sizes.length===1" ngbDropdownToggle>{{activeSize}}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" *ngIf="product.sizes.length!==1">
+        <button *ngFor="let size of product.sizes" class="dropdown-item">{{size}}</button>
+      </div>
+    </div>
+
+    <ul class="product-colors" *ngIf="product.colors.length">
+      <li *ngFor="let color of product.colors" [style.background-color]="color" class="product-collor-detail"></li>
+    </ul>
+
+    <span class="product-price">{{product.price | currency:'EUR'}}</span>
+    <span class="product-name">{{product.name}}</span>
+  </article>
+</a>

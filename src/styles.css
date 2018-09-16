@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./assets/font/Quicksand/Quicksand-Bold.woff2') format('woff2'),
+        url('./assets/font/Quicksand/Quicksand-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+.wrapper__width {
+  width: 1150px;
+  margin: 0 auto;
+}

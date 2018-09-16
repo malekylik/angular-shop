@@ -1,0 +1,23 @@
+<app-back-navbar></app-back-navbar>
+<div class="wrapper__width">
+  <div class="name-with-line-nav_wrapper">
+    <app-name-with-line [name]="product.name"></app-name-with-line>
+  </div>
+  <div class="product">
+    <div class="product-image">
+      <img [src]="product.images.big">
+    </div>
+    <div class="product-info">
+      <span>{{product.price | currency:'EUR'}}</span>
+      <span>PRICE</span>
+      <span>
+        <ul class="product-colors" *ngIf="product.colors.length">
+          <li *ngFor="let color of product.colors" [style.background-color]="color" class="product-collor-detail"></li>
+        </ul>
+      </span>
+      <span>COLORS</span>
+      <span>{{product.sizes | arrayAsString}}</span>
+      <span>SIZES</span>
+    </div>
+  </div>
+</div>

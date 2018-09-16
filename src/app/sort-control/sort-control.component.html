@@ -1,0 +1,11 @@
+<div class="wrapper__width main_sort-control-wrapper">
+  <div>
+    <span class="main_sort-option-description">SORT BY</span>
+    <div ngbDropdown class="d-inline-block main_sort-options">
+      <button class="main_sort-option-selected" id="dropdownBasic1" ngbDropdownToggle>{{selectedSortOption | uppercase}}</button>
+      <div ngbDropdownMenu class="main-sort-option-drop-down" aria-labelledby="dropdownBasic1">
+        <button *ngFor="let sortOption of sortOptions" (click)="sort(sortOption)" class="dropdown-item">{{sortOption | uppercase}}</button>
+      </div>
+    </div>
+  </div>
+</div>

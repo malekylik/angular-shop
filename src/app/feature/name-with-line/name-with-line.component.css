@@ -1,0 +1,23 @@
+.name-with-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-with-line__reverse {
+    flex-flow: row-reverse;
+}
+
+.name-with-line_name {
+    color: #424242;
+    font-size: 20px;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    margin-right: 5px;
+}
+
+.name-with-line_line {
+    flex-grow: 1;
+    max-width: 1000px;
+    height: 2px;
+    background-color: #ccc;
+}

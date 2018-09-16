@@ -1,0 +1,35 @@
+nav {
+    height: 143px;
+    background-color: #f5f6f7;
+}
+
+a {
+    position: relative;
+    font-size: 22px;
+    color: #424242;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding-left: 40px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 11px;
+    width: 10px;
+    height: 10px;
+    border: solid #424242;
+    border-width: 0 2px 2px 0;
+    transform: rotate(135deg);
+}
+
+.back-nav_wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

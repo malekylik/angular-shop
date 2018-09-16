@@ -1,0 +1,15 @@
+<nav>
+  <div class="wrapper__width nav_wrapper">
+    <ul>
+      <li *ngFor="let category of categories;let i=index;">
+        <label for="category-{{i}}" class="container">{{category.name}}
+        <input id="category-{{i}}" type="checkbox" [name]="category.name" [(ngModel)]="category.checked">
+        <span class="checkmark"></span>
+        </label>
+      </li>
+    </ul>
+    <button class="navbar_see-all-button" (click)="seeAllProducts()">
+      SEE ALL PRODUCTS
+    </button>
+  </div>
+</nav>

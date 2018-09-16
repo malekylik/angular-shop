@@ -1,0 +1,9 @@
+<app-navbar [categories]="categories"></app-navbar>
+<main>
+    <app-sort-control [categories]="categories"></app-sort-control>
+    <ng-container *ngFor="let category of categories; let odd=odd">
+        <div class="product-category-wrapper" *ngIf="category.checked">
+            <app-product-category [name]="category" [right]="odd" [products]="category.products"></app-product-category>
+        </div>
+    </ng-container>
+</main>
